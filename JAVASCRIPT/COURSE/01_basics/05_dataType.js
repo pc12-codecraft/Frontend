@@ -23,7 +23,8 @@ console.log(typeof id);
 
 const anotherId = Symbol('123')
 console.log(typeof anotherId);
-console.log(id == anotherId);
+console.log(id == anotherId);     //false
+//Symbol("123") and Symbol("123") have the same description but are two completely different unique Symbols, so comparing them gives false.
 
 const bigNumber = 34567543223456677888877n
 console.log(typeof bigNumber);
@@ -32,15 +33,15 @@ console.log(typeof bigNumber);
 type... Array, Objects, Functions
 */
 const heros = ["shaktiman", "naagraj", "doga"]
-console.log(typeof heros);
+console.log(typeof heros);   //object
 
 let myObj ={
     name : "hitesh",
     age : 22,
 }
-console.log(typeof myObj);
+console.log(typeof myObj);       //object
 
 const myFunction = function(){
     console.log("Hello World");
 }
-console.log(typeof myFunction);
+console.log(typeof myFunction);     //function
