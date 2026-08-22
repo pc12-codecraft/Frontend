@@ -49,6 +49,7 @@ console.log(valueInNums);              //NaN
 //"33abc" --> NaN  -->number
 //If the whole string represents a valid number → Number() converts it. Otherwise → NaN.
 //true --> 1, false --> 0  --> number
+//+true  --> 1,  +"" --> 0
 
 //null        → 0     → number
 //undefined   → NaN   → number
@@ -94,8 +95,29 @@ let str2 = "priya"
 let str3 = str1 + str2
 console.log(str3);          //hellopriya
 
-console.log("2"+2);
-console.log(2+"3");
+console.log("2"+2);          //22
+console.log(2+"3");          //23
+//String + anything → usually string concatenation
+//This is important because JavaScript evaluates left to right.
+console.log("2"+2+2);        //222
+console.log(2+1+"3");        //33
+/*
+"2" + 2
+↓
+"22"
+
+"22" + 2
+↓
+"222"
+
+2 + 1
+↓
+3
+
+3 + "3"
+↓
+"33"
+*/
 console.log("Age: "+18);
 
 //IMPLICIT CONVERSION
