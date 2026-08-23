@@ -13,6 +13,14 @@ anotherName = "chaiaurcode"
 console.log(myYoutubeName)
 console.log(anotherName)
 
+//Because strings are primitive values.
+let a = "hello";
+let b = a;
+
+b = "bye";
+console.log(a); // hello
+console.log(b); // bye
+
 
 //Non-primitive
 let userOne = {
@@ -21,6 +29,9 @@ let userOne = {
 }
 
 let userTwo = userOne
+
+//Here userTwo does not get an independent copy of the object.
+//Both variables refer to the same obje
 
 userTwo.email = "priya@google.com"
 console.log(userOne.email);
